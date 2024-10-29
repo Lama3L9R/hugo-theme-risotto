@@ -5,7 +5,6 @@
     </header>
 
     {{ range .Pages }}
-        {{ if not (hasPrefix .File.LogicalName "__hidden") }}
         <article class="post">
             <header class="post__header">
                 <h1><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
@@ -19,6 +18,5 @@
                 {{ .Summary }}
             </section>
         </article>
-        {{ end }}
     {{ end }}
 {{ end }}

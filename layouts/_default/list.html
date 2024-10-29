@@ -5,7 +5,9 @@
 
     <ul>
     {{ range .Pages }}
-        {{ .Render "li" }}
+        {{ if not (strings.Contains .Permalink "__hidden") }}
+            {{ .Render "li" }}
+        {{ end }}
     {{ end }}
     </ul>
 
