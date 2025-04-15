@@ -8,10 +8,6 @@
 
         <h1>{{ .Title | markdownify }}</h1>
     </header>
-    {{ if .Params.toc }}
-    <aside>
-    </aside>
-    {{ end }}
     <div class="content__body">
         {{ .Content }}
     </div>
